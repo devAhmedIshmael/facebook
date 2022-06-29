@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Facebook</title>
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="styles/all.min.css" />
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="styles/bootstrap.css" />
+    <!-- Animate CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles/stylesheet.css" />
+  </head>
+  <body>
+    <div class="row">
+      <div class="col-2"></div>
+      <div class="col-4 left-side">
+        <h1 class="fb">facebook</h1>
+        <h4>
+          Facebook helps you connect and share with the people in your life.
+        </h4>
+      </div>
+      <div class="col-4 right-side">
+        <div class="login shadow p-3 mb-3 bg-body">
+          <form action="">
+            <input
+              type="text"
+              placeholder="Email address or phone number"
+              class="mb-3 px-3 login-input"
+            />
+            <input
+              type="password"
+              class="mb-3 px-3 login-input"
+              placeholder="Password"
+            />
+            <input type="submit" class="login-btn mb-3" value="Log In" />
+          </form>
+          <a href="#" class="forgetten">Forgetten password?</a>
+          <hr />
+          <button class="create-account" id="create-new-account">
+            Create New Account
+          </button>
+        </div>
+        <div>
+          <p><b>Create a Page</b> for a celebrity, brand or business.</p>
+        </div>
+      </div>
+      <div class="col-2"></div>
+    </div>
+    <div class="" id="cover"></div>
+    <div class="signup-parent row">
+      <div class="col-lg-4"></div>
+      <div class="col-lg-4 signup shadow p-3 mb-3 bg-body">
+        <h4>Sign Up</h4>
+        <p>It's quick and easy.</p>
+        <hr />
+        <form action="" id="signup-form">
+          <div class="input-container">
+            <div class="error error-fname"></div>
+            <div class="error error-sname"></div>
+          </div>
+          <div class="input-container">
+            <div class="name-error">
+              <input
+                type="text"
+                placeholder="First name"
+                class="name"
+                name="first-name"
+              />
+            </div>
+            <div class="name-error">
+              <input
+                type="text"
+                placeholder="Surname"
+                class="name"
+                name="sur-name"
+              />
+            </div>
+          </div>
+          <div class="error error-email"></div>
+          <input type="text" placeholder="Email address" name="email" />
+          <div class="error error-password"></div>
+          <input type="password" placeholder="New password" name="password" />
+          <input type="checkbox" id="show-password" />
+          <label for="show-password">Show Password</label>
+          <div>
+            <p>Date of birth</p>
+            <div class="error error-birthdate"></div>
+            <input type="date" name="birth-date" />
+          </div>
+          <div>
+            <p>Gender</p>
+            <div class="error error-gender"></div>
+            <input
+              type="radio"
+              id="Male"
+              name="gender"
+              value="Male"
+              class="gender"
+            />
+            <label for="Male">Male</label>
+            <input
+              type="radio"
+              id="Female"
+              name="gender"
+              value="Female"
+              class="gender"
+            />
+            <label for="Female">Female</label>
+          </div>
+          <div class="submit">
+            <input type="submit" value="Sign Up" class="signup-btn" />
+          </div>
+        </form>
+      </div>
+      <div class="col-lg-4"></div>
+    </div>
+
+    <!-- WOW JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+    <script src="js/wow.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <!-- App JS -->
+    <script src="js/app.js"></script>
+  </body>
+</html>
