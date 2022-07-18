@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Facebook</title>
+    <link rel="icon" type="image/x-icon" href="icons/favicon.ico" />
     <!-- fontawesome -->
     <link rel="stylesheet" href="styles/all.min.css" />
     <!-- bootstrap -->
@@ -18,7 +19,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@500&display=swap"
       rel="stylesheet"
     />
     <!-- Stylesheet -->
@@ -26,109 +27,328 @@
   </head>
   <body>
     <div class="row">
-      <div class="col-2"></div>
-      <div class="col-4 left-side">
-        <h1 class="fb">facebook</h1>
-        <h4>
+      <div class="col-lg-2"></div>
+      <div class="col-lg-4 content l-side">
+        <h1>facebook</h1>
+        <h5>
           Facebook helps you connect and share with the people in your life.
-        </h4>
+        </h5>
       </div>
-      <div class="col-4 right-side">
-        <div class="login shadow p-3 mb-3 bg-body">
-          <form action="">
-            <input
-              type="text"
-              placeholder="Email address or phone number"
-              class="mb-3 px-3 login-input"
-            />
-            <input
-              type="password"
-              class="mb-3 px-3 login-input"
-              placeholder="Password"
-            />
-            <input type="submit" class="login-btn mb-3" value="Log In" />
+      <div class="col-lg-4 content r-side">
+        <div class="shadow p-3 mb-4 bg-body signin-form">
+          <form action="login.html">
+            <div class="input">
+              <input
+                type="text"
+                class="mb-3 p-3"
+                placeholder="Email address or phone number"
+              />
+              <img
+                class="err-icon"
+                src="icons/!.png"
+                width="20px"
+                height="20px"
+              />
+            </div>
+            <div class="input">
+              <input type="password" class="mb-3 p-3" placeholder="Password" />
+              <img
+                class="err-icon"
+                src="icons/!.png"
+                width="20px"
+                height="20px"
+              />
+            </div>
+            <input type="submit" value="Log In" id="log-in" class="mb-3" />
+            <a
+              class="mb-3"
+              href="https://www.facebook.com/login/identify/?ctx=recover&ars=facebook_login&from_login_screen=0"
+              >Forgotten password?</a
+            >
+            <hr class="mb-3" />
+            <button id="create-account" class="px-3">Create New Account</button>
           </form>
-          <a href="#" class="forgetten">Forgetten password?</a>
-          <hr />
-          <button class="create-account" id="create-new-account">
-            Create New Account
-          </button>
+        </div>
+        <p>
+          <a
+            style="color: black; text-decoration: none; font-weight: bold"
+            href="https://www.facebook.com/pages/create/?ref_type=registration_form"
+            >Create a Page</a
+          >
+          for a celebrity, brand or business.
+        </p>
+      </div>
+      <div class="col-lg-2"></div>
+    </div>
+    <!-- cover -->
+    <div id="cover"></div>
+    <!-- signup form -->
+    <div class="col-lg-4 signup-form shadow p-3 mb-5 bg-body">
+      <div class="signup-header">
+        <div>
+          <h3 style="font-weight: bold" class="mb-0">Sign Up</h3>
+          <p style="color: gray; font-size: medium" class="mb-2">
+            It's quick and easy.
+          </p>
         </div>
         <div>
-          <p><b>Create a Page</b> for a celebrity, brand or business.</p>
+          <img src="icons/x-lg.svg" id="close-signup" />
         </div>
       </div>
-      <div class="col-2"></div>
-    </div>
-    <div class="" id="cover"></div>
-    <div class="signup-parent row">
-      <div class="col-lg-4"></div>
-      <div class="col-lg-4 signup shadow p-3 mb-3 bg-body">
-        <h4>Sign Up</h4>
-        <p>It's quick and easy.</p>
-        <hr />
-        <form action="" id="signup-form">
-          <div class="input-container">
-            <div class="error error-fname"></div>
-            <div class="error error-sname"></div>
-          </div>
-          <div class="input-container">
-            <div class="name-error">
-              <input
-                type="text"
-                placeholder="First name"
-                class="name"
-                name="first-name"
-              />
-            </div>
-            <div class="name-error">
-              <input
-                type="text"
-                placeholder="Surname"
-                class="name"
-                name="sur-name"
-              />
-            </div>
-          </div>
-          <div class="error error-email"></div>
-          <input type="text" placeholder="Email address" name="email" />
-          <div class="error error-password"></div>
-          <input type="password" placeholder="New password" name="password" />
-          <input type="checkbox" id="show-password" />
-          <label for="show-password">Show Password</label>
-          <div>
-            <p>Date of birth</p>
-            <div class="error error-birthdate"></div>
-            <input type="date" name="birth-date" />
-          </div>
-          <div>
-            <p>Gender</p>
-            <div class="error error-gender"></div>
+      <hr class="mt-0" />
+      <form action="">
+        <div class="fullname mb-2">
+          <!-- first name -->
+          <div class="input">
+            <div class="tip p-2 rounded">What's your name?</div>
             <input
-              type="radio"
-              id="Male"
-              name="gender"
-              value="Male"
-              class="gender"
+              type="text"
+              name="first-name"
+              placeholder="First name"
+              class="me-1 p-3"
             />
-            <label for="Male">Male</label>
+            <img
+              src="icons/pmark.png"
+              width="20px"
+              height="20px"
+              class="error"
+            />
+          </div>
+          <!-- surname -->
+          <div class="input">
+            <div class="surname-tip p-2 rounded">What's your name?</div>
             <input
-              type="radio"
-              id="Female"
-              name="gender"
-              value="Female"
-              class="gender"
+              type="text"
+              name="surname"
+              placeholder="Surname"
+              class="ms-1 p-3"
             />
-            <label for="Female">Female</label>
+            <img
+              src="icons/pmark.png"
+              width="20px"
+              height="20px"
+              class="error"
+            />
           </div>
-          <div class="submit">
-            <input type="submit" value="Sign Up" class="signup-btn" />
+        </div>
+        <!-- email -->
+        <div class="input">
+          <div
+            class="tip p-2 rounded"
+            style="width: 300px; left: -315px; bottom: -2px"
+          >
+            You'll use this when you log in and if you ever need to reset your
+            password.
           </div>
-        </form>
-      </div>
-      <div class="col-lg-4"></div>
-    </div>
+          <input
+            type="text"
+            class="p-3 mb-2"
+            placeholder="Mobile number or email address"
+            name="email"
+          />
+          <img src="icons/pmark.png" width="20px" height="20px" class="error" />
+        </div>
 
+        <div class="input" id="re-email">
+          <div
+            class="tip p-2 rounded"
+            style="width: 270px; left: -287px; bottom: 10px"
+          >
+            Your emails do not match. Please try again.
+          </div>
+          <input
+            type="text"
+            class="p-3 mb-2"
+            placeholder="Re-enter email address"
+            name="re-email"
+          />
+          <img src="icons/pmark.png" width="20px" height="20px" class="error" />
+        </div>
+        <!-- password -->
+        <div class="input">
+          <div
+            class="tip p-2 rounded"
+            style="width: 300px; left: -315px; bottom: -2px"
+          >
+            Enter a combination of at least six numbers, letters and punctuation
+            marks (such as ! and &).
+          </div>
+          <input
+            type="password"
+            class="p-3 mb-2"
+            placeholder="New password"
+            name="password"
+          />
+          <img src="icons/pmark.png" width="20px" height="20px" class="error" />
+        </div>
+        <!-- date of birth -->
+        <div style="display: flex; position: relative">
+          <p>Date of birth</p>
+          <a title="Click for more information" class="info">
+            <img
+              src="icons/qmark.png"
+              width="13px"
+              height="13px"
+              class="mb-1 ms-1"
+            />
+          </a>
+          <div class="dob-info shadow p-3 bg-body rounded">
+            <p>
+              <b>Providing your date of birth</b> helps make sure that you get
+              the right Facebook experience for your age. If you want to change
+              who sees this, go to the About section of your Profile. For more
+              details, please visit our
+              <a
+                style="text-decoration: none"
+                href="https://www.facebook.com/privacy/explanation/"
+                >Data Policy</a
+              >.
+            </p>
+          </div>
+          <img
+            src="icons/pmark.png"
+            width="20px"
+            height="20px"
+            style="position: absolute; right: 8px; top: 0px"
+            id="dob-error"
+          />
+        </div>
+        <div style="display: flex; justify-content: space-between" class="mb-2">
+          <div
+            class="tip p-2 rounded"
+            style="left: -320px; width: 320px; bottom: 230px"
+            id="dob-tip"
+          >
+            It looks like you've entered the wrong info. Please make sure that
+            you use your real date of birth.
+          </div>
+          <select class="me-1 px-2" id="day"></select>
+          <select class="mx-1 px-2" id="month"></select>
+          <select class="ms-1 px-2" id="year"></select>
+        </div>
+        <!-- gender -->
+        <div style="display: flex; position: relative">
+          <p>Gender</p>
+          <a title="Click for more information" class="info">
+            <img
+              src="icons/qmark.png"
+              width="13px"
+              height="13px"
+              class="mb-1 ms-1"
+            />
+          </a>
+          <div class="gender-info shadow p-3 bg-body rounded">
+            <p>
+              You can change who sees your gender on your profile later. Select
+              Custom to choose another gender, or if you'd rather not say.
+            </p>
+          </div>
+          <img
+            src="icons/pmark.png"
+            width="20px"
+            height="20px"
+            style="position: absolute; right: 8px; top: 0px"
+            id="gender-error"
+          />
+        </div>
+        <div
+          class="gender-container mb-2"
+          style="display: flex; justify-content: space-between"
+        >
+          <div
+            class="tip p-2 rounded"
+            style="left: -320px; width: 320px; bottom: 155px"
+            id="gender-tip"
+          >
+            Please choose a gender. You can change who can see this later.
+          </div>
+
+          <div
+            class="gender px-2 me-1"
+            style="display: flex; justify-content: space-between"
+          >
+            <label for="female" class="mt-2">Female</label>
+            <input type="radio" name="gender" id="female" />
+          </div>
+          <div
+            class="gender px-2 mx-1"
+            style="display: flex; justify-content: space-between"
+          >
+            <label for="male" class="mt-2">Male</label>
+            <input type="radio" name="gender" id="male" />
+          </div>
+          <div
+            class="gender px-2 ms-1"
+            style="display: flex; justify-content: space-between"
+          >
+            <label for="custom" class="mt-2">Custom</label>
+            <input type="radio" name="gender" id="custom" />
+          </div>
+        </div>
+        <div class="custom-details mb-2" style="position: relative">
+          <div
+            class="tip p-2 rounded"
+            style="
+              position: absolute;
+              width: 180px;
+              top: 2px;
+              left: -195px;
+              display: none;
+            "
+            id="pronoun-tip"
+          >
+            Please select your pronoun.
+          </div>
+          <img
+            src="icons/pmark.png"
+            width="20px"
+            height="20px"
+            style="position: absolute; right: 20px; top: 10px; display: none"
+            id="pronoun-error"
+          />
+          <select id="pronoun">
+            <option selected disabled>Select your pronoun</option>
+            <option>She: "Wish her a happy birthday!"</option>
+            <option>he: "Wish him a happy birthday!"</option>
+            <option>They: "Wish them a happy birthday!"</option>
+          </select>
+          <p class="mb-1">Your pronoun is visible to everyone.</p>
+          <input type="text" placeholder="Gender (optional)" />
+        </div>
+        <p class="mb-4" style="font-size: x-small">
+          People who use our service may have uploaded your contact information
+          to Facebook.
+          <a
+            style="text-decoration: none"
+            href="https://www.facebook.com/help/637205020878504"
+            >Learn more</a
+          >.
+          <br />
+          <br />
+          By clicking Sign Up, you agree to our
+          <a
+            style="text-decoration: none"
+            href="https://www.facebook.com/legal/terms/update"
+            >Terms</a
+          >,
+          <a
+            style="text-decoration: none"
+            href="https://www.facebook.com/about/privacy/update"
+            >Data Policy</a
+          >
+          and
+          <a
+            style="text-decoration: none"
+            href="https://www.facebook.com/policies/cookies/"
+            >Cookie Policy</a
+          >. You may receive SMS notifications from us and can opt out at any
+          time.
+        </p>
+        <div style="display: flex; justify-content: center">
+          <input type="submit" value="Sign Up" id="signup" />
+        </div>
+      </form>
+    </div>
     <!-- WOW JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
     <script>

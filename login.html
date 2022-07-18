@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log in to facebook</title>
+    <!-- fontawesome -->
+    <link rel="stylesheet" href="styles/all.min.css" />
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="styles/bootstrap.css" />
+    <!-- Animate CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Albert+Sans:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles/stylesheet.css" />
+  </head>
+  <body>
+    <div class="row">
+      <div class="col-lg-4"></div>
+      <div class="col-lg-4 content r-side">
+        <h1>facebook</h1>
+        <div class="shadow p-3 m-4 bg-body signin-form">
+          <form action="">
+            <p>Log in to Facebook</p>
+            <div class="input">
+              <input
+                type="text"
+                class="mb-1 p-3"
+                placeholder="Email address or phone number"
+                style="border: 1px solid #fa3c3c; outline: none"
+              />
+              <img
+                class="err-icon"
+                src="icons/!.png"
+                width="20px"
+                height="20px"
+                style="display: block"
+              />
+            </div>
+            <p style="color: #fa3c3c; font-size: small">
+              The email address or mobile number you entered isn't connected to
+              an account.
+              <a
+                style="font-weight: bold; text-decoration: none; color: #fa3c3c"
+                href="https://www.facebook.com/login/identify/"
+              >
+                Find your account and log in.
+              </a>
+            </p>
+            <input type="password" class="mb-3 p-3" placeholder="Password" />
+            <input type="submit" value="Log In" id="log-in" class="mb-3" />
+            <a
+              class="mb-3"
+              href="https://www.facebook.com/login/identify/?ctx=recover&ars=facebook_login&from_login_screen=0"
+              >Forgotten password?</a
+            >
+          </form>
+        </div>
+      </div>
+      <div class="col-lg-4"></div>
+    </div>
+    <!-- WOW JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script>
+      new WOW().init();
+    </script>
+    <script src="js/wow.js"></script>
+    <!-- Bootstrap -->
+    <script src="js/popper.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <!-- App JS -->
+    <script src="js/app.js"></script>
+  </body>
+</html>
